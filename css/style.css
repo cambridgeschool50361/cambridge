@@ -1,0 +1,218 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+}
+
+/* Top bar */
+.topbar {
+    background: #6495ED;
+    color: #FFD700;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* HEADER BACKGROUND */
+.header {
+    background: #FFFFFF;
+    padding: 12px 10;
+    border-bottom: 3px solid #0d6efd;
+}
+
+ 
+/* SCHOOL NAME School Logo */
+.school-logo {
+    max-height: 110px;
+    margin-left: 30px; /* adjust this value */
+}
+
+
+
+
+/* AFFILIATION */
+.affiliation-box {
+    text-align: right;
+}
+
+.affiliation-box .label {
+    display: inline-block;
+    width: 160px;   /* same width for all labels */
+    font-weight: bold;
+}
+
+
+/* Announcement */
+.announcement {
+    background: #ffc107;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(to right, #0d6efd, #003366);
+    color: white;
+    padding: 40px;
+}
+
+/* Footer */
+.footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Hover effects */
+.nav-link:hover {
+    text-decoration: underline;
+}
+/* Slider full width */
+#mainSlider {
+    width: 100%;
+}
+
+/* Image height + fit */
+.slider-img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Caption styling */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* Image */
+.slider-img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Zoom container */
+.zoom-container {
+    overflow: hidden;
+}
+
+
+
+
+/* Book page flip effect */
+.carousel-item {
+    transition: transform 0.3 s ease-in-out;
+    backface-visibility: hidden;
+}
+
+/* Slide from right to left */
+.carousel-item-next.carousel-item-start,
+.carousel-item-prev.carousel-item-end {
+    transform: translateX(100%);
+}
+
+.carousel-item-active.carousel-item-start,
+.carousel-item-active.carousel-item-end {
+    transform: translateX(0);
+}
+
+.carousel-item-prev.carousel-item-start {
+    transform: translateX(-100%);
+}
+
+/* Optional: 3D Book Effect */
+.carousel-inner {
+    perspective: 1200px;
+}
+
+.carousel-item {
+    transform-origin: left center;
+}
+
+.carousel-item-next {
+    transform: rotateY(-90deg);
+}
+
+.carousel-item-prev {
+    transform: rotateY(90deg);
+}
+
+
+
+.
+
+/* announcement */
+.announcement {
+    display: flex;
+    align-items: center;
+    background: #0d6efd;
+    color: #fff;
+    padding: 10px;
+    overflow: hidden;
+}
+
+/* Fixed bell */
+.icon {
+    font-size: 20px;
+    margin-right: 15px;
+    animation: blink 1s infinite;
+    flex-shrink: 0;
+}
+
+/* Blinking */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Ticker container (important) */
+.ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+/* Moving text */
+.ticker span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 12s linear infinite;
+}
+
+/* Scroll animation */
+@keyframes scrollText {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.ticker::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(to right, #0d6efd, transparent);
+    z-index: 2;
+}
+
+
+<!-- MAIN CONTENT -->
+
+.list-group-item a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+.list-group-item a:hover {
+    color: #0d6efd;
+    font-weight: 500;
+}
