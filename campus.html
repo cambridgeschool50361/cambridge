@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Campus & Facilities | Cambridge School</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    overflow-x:hidden;
+    color:#333;
+}
+
+/* HEADER */
+
+.header{
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url('images/campus-bg.jpg');
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+    text-align:center;
+    padding:110px 20px;
+    position:relative;
+}
+
+.header h1{
+    font-size:52px;
+    font-weight:700;
+    margin-bottom:15px;
+    animation:fadeDown 1s ease;
+}
+
+.header p{
+    font-size:18px;
+    max-width:850px;
+    margin:auto;
+    line-height:1.8;
+    animation:fadeUp 1.2s ease;
+}
+
+/* CONTAINER */
+
+.container{
+    width:92%;
+    max-width:1450px;
+    margin:70px auto;
+}
+
+/* TITLE */
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:38px;
+    color:#004d40;
+    position:relative;
+    display:inline-block;
+    padding-bottom:12px;
+}
+
+.section-title h2::after{
+    content:'';
+    width:70%;
+    height:4px;
+    background:#009688;
+    position:absolute;
+    left:15%;
+    bottom:0;
+    border-radius:10px;
+}
+
+/* GRID */
+
+.facility-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:35px;
+}
+
+/* CARD */
+
+.facility-card{
+    background:#fff;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.5s;
+    position:relative;
+}
+
+.facility-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+
+.facility-img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+/* CONTENT */
+
+.facility-content{
+    padding:28px;
+}
+
+.facility-icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00695c,#26a69a);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:28px;
+    margin-top:-65px;
+    position:relative;
+    z-index:2;
+    border:5px solid #fff;
+    margin-bottom:20px;
+}
+
+.facility-content h3{
+    font-size:26px;
+    color:#004d40;
+    margin-bottom:18px;
+}
+
+.facility-content p{
+    font-size:15px;
+    color:#555;
+    line-height:1.9;
+    text-align:justify;
+}
+
+/* SCIENCE LIST */
+
+.science-list{
+    margin-top:18px;
+}
+
+.science-list li{
+    list-style:none;
+    padding:10px 0;
+    border-bottom:1px dashed #ddd;
+    font-size:15px;
+    color:#444;
+}
+
+.science-list li i{
+    color:#009688;
+    margin-right:10px;
+}
+
+/* HOVER BUTTON */
+
+.read-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    border-radius:40px;
+    text-decoration:none;
+    background:linear-gradient(135deg,#00695c,#009688);
+    color:#fff;
+    font-size:14px;
+    transition:0.4s;
+}
+
+.read-btn:hover{
+    background:linear-gradient(135deg,#004d40,#00796b);
+    transform:scale(1.05);
+}
+
+/* FOOTER */
+
+.footer{
+    background:#002b24;
+    color:#fff;
+    text-align:center;
+    padding:28px 15px;
+    margin-top:70px;
+}
+
+.footer p{
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .header h1{
+        font-size:34px;
+    }
+
+    .header p{
+        font-size:15px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+    <h1>Campus & Facilities</h1>
+    <p>
+        Cambridge School provides world-class facilities for academic excellence,
+        creativity, innovation, sportsmanship and personality development.
+    </p>
+</div>
+
+<!-- MAIN CONTAINER -->
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>Explore Our Facilities</h2>
+    </div>
+
+    <!-- GRID -->
+
+    <div class="facility-grid">
+
+        <!-- ART & CRAFT -->
+
+        <div class="facility-card">
+
+            <img src="images/art.jpg" class="facility-img">
+
+            <div class="facility-content">
+
+                <div class="facility-icon">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+
+                <h3>Art & Craft</h3>
+
+                <p>
+                    Students in the art classes make the art room lively with paints,
+                    colours, cloth thread and various creative materials. Students learn
+                    sketching, painting, thread & fibre work and creative utilization
+                    of waste materials to develop artistic talent and imagination.
+                </p>
+
+                <a href="#" class="read-btn">Explore More</a>
+
+            </div>
+
+        </div>
+
+        <!-- LIBRARY -->
+
+        <div class="facility-card">
+
+            <img src="images/library.jpg" class="facility-img">
+
+            <div class="facility-content">
+
+                <div class="facility-icon">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                </div>
+
+                <h3>Library</h3>
+
+                <p>
+                    Our school library has a rich collection of academic books,
+                    fiction books and reference materials. Extended reading programmes
+                    are promoted for personality development, creativity and intellectual growth.
+                    Books provide knowledge, encouragement and lifelong learning.
+                </p>
+
+                <a href="#" class="read-btn">Explore More</a>
+
+            </div>
+
+        </div>
+
+        <!-- COMPUTER LAB -->
+
+        <div class="facility-card">
+
+            <img src="images/computer.jpg" class="facility-img">
+
+            <div class="facility-content">
+
+                <div class="facility-icon">
+                    <i class="fa-solid fa-computer"></i>
+                </div>
+
+                <h3>Computer Lab</h3>
+
+                <p>
+                    The school has advanced computer labs equipped with internet facilities.
+                    Students gain both theoretical and practical knowledge while preparing
+                    presentations and digital projects under expert supervision.
+                    Modern technology learning prepares students for the future.
+                </p>
+
+                <a href="#" class="read-btn">Explore More</a>
+
+            </div>
+
+        </div>
+
+        <!-- MUSIC -->
+
+        <div class="facility-card">
+
+            <img src="images/music.jpg" class="facility-img">
+
+            <div class="facility-content">
+
+                <div class="facility-icon">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+
+                <h3>Music</h3>
+
+                <p>
+                    Music education develops emotional, intellectual and social growth.
+                    It enhances creativity, critical thinking and personality traits.
+                    Students participate in musical activities that inspire confidence,
+                    expression and cultural appreciation.
+                </p>
+
+                <a href="#" class="read-btn">Explore More</a>
+
+            </div>
+
+        </div>
+
+        <!-- SPORTS -->
+
+        <div class="facility-card">
+
+            <img src="images/sports.jpg" class="facility-img">
+
+            <div class="facility-content">
+
+                <div class="facility-icon">
+                    <i class="fa-solid fa-football"></i>
+                </div>
+
+                <h3>Sports Facilities</h3>
+
+                <p>
+                    The school provides excellent indoor and outdoor sports facilities
+                    including chess, carrom, table tennis, cricket, basketball,
+                    football, volleyball, badminton and athletics. Sports improve
+                    discipline, confidence, fitness, teamwork and leadership skills.
+                </p>
+
+                <a href="#" class="read-btn">Explore More</a>
+
+            </div>
+
+        </div>
+
+        <!-- SCIENCE BLOCK -->
+
+        <div class="facility-card">
+
+            <img src="images/science.jpg" class="facility-img">
+
+            <div class="facility-content">
+
+                <div class="facility-icon">
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+
+                <h3>Science Block</h3>
+
+                <p>
+                    Cambridge School has well-equipped Chemistry, Physics and Biology
+                    laboratories managed by trained lab in-charges and assistants.
+                    Junior students also enjoy experiments in the EVS laboratory.
+                </p>
+
+                <ul class="science-list">
+
+                    <li><i class="fa-solid fa-check"></i> Chemistry Laboratory</li>
+                    <li><i class="fa-solid fa-check"></i> Physics Laboratory</li>
+                    <li><i class="fa-solid fa-check"></i> Biology Laboratory</li>
+                    <li><i class="fa-solid fa-check"></i> EVS Laboratory</li>
+                    <li><i class="fa-solid fa-check"></i> Interactive Smart Classes</li>
+
+                </ul>
+
+                <a href="#" class="read-btn">Explore More</a>
+
+            </div>
+
+        </div>
+
+        <!-- SCIENCE ACTIVITIES -->
+
+        <div class="facility-card">
+
+            <img src="images/science-activity.jpg" class="facility-img">
+
+            <div class="facility-content">
+
+                <div class="facility-icon">
+                    <i class="fa-solid fa-microscope"></i>
+                </div>
+
+                <h3>Science Activities</h3>
+
+                <p>
+                    The school regularly conducts innovative science activities to
+                    encourage practical learning, creativity and scientific thinking.
+                </p>
+
+                <ul class="science-list">
+
+                    <li><i class="fa-solid fa-star"></i> Science Olympiads</li>
+                    <li><i class="fa-solid fa-star"></i> Projects & Working Models</li>
+                    <li><i class="fa-solid fa-star"></i> Demonstration Experiments</li>
+                    <li><i class="fa-solid fa-star"></i> Tree Plantation</li>
+                    <li><i class="fa-solid fa-star"></i> Educational Visits</li>
+                    <li><i class="fa-solid fa-star"></i> Science Workshops</li>
+                    <li><i class="fa-solid fa-star"></i> Science Week Celebration</li>
+                    <li><i class="fa-solid fa-star"></i> Educational Fun Games</li>
+
+                </ul>
+
+                <a href="#" class="read-btn">Explore More</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+    <p>© 2026 Cambridge School | Campus & Facilities</p>
+</div>
+
+</body>
+</html>

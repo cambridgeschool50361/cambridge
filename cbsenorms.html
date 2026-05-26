@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBSE Norms & Important Links</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+.header{
+    width:100%;
+    background:linear-gradient(135deg,#004d40,#00695c);
+    padding:60px 20px;
+    text-align:center;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+}
+
+.header::before{
+    content:'';
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    top:-100px;
+    left:-100px;
+}
+
+.header::after{
+    content:'';
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(255,255,255,0.06);
+    border-radius:50%;
+    bottom:-150px;
+    right:-120px;
+}
+
+.header h1{
+    font-size:42px;
+    font-weight:700;
+    position:relative;
+    z-index:2;
+}
+
+.header p{
+    margin-top:10px;
+    font-size:17px;
+    opacity:0.9;
+    position:relative;
+    z-index:2;
+}
+
+/* SECTION */
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:50px auto;
+}
+
+/* TITLE */
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:34px;
+    color:#004d40;
+    position:relative;
+    display:inline-block;
+    padding-bottom:10px;
+}
+
+.section-title h2::after{
+    content:'';
+    width:70%;
+    height:4px;
+    background:#009688;
+    position:absolute;
+    left:15%;
+    bottom:0;
+    border-radius:10px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+.card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.card::before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:5px;
+    top:0;
+    left:0;
+    background:linear-gradient(90deg,#00796b,#26a69a);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.icon{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00796b,#26a69a);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:18px;
+    color:#fff;
+    font-size:24px;
+}
+
+.card h3{
+    font-size:19px;
+    color:#004d40;
+    margin-bottom:12px;
+    font-weight:600;
+}
+
+.card p{
+    color:#555;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.card a{
+    display:inline-block;
+    margin-top:18px;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#00695c,#009688);
+    color:#fff;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.card a:hover{
+    background:linear-gradient(135deg,#004d40,#00796b);
+}
+
+/* IMPORTANT LINKS */
+.links-section{
+    margin-top:70px;
+}
+
+.links-box{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.links{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
+}
+
+.link-item{
+    background:#f7fdfc;
+    border-left:5px solid #009688;
+    padding:16px 18px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.link-item:hover{
+    transform:translateX(5px);
+    background:#e8f5f3;
+}
+
+.link-item a{
+    text-decoration:none;
+    color:#004d40;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.link-item i{
+    color:#009688;
+}
+
+/* FOOTER */
+.footer{
+    margin-top:70px;
+    background:#003d33;
+    color:#fff;
+    text-align:center;
+    padding:25px 10px;
+}
+
+.footer p{
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .header h1{
+        font-size:30px;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>CBSE Norms & Important Resources</h1>
+    <p>Academic Guidelines, Policies, Learning Outcomes & Important Educational Links</p>
+</div>
+
+<div class="container">
+
+    <!-- SECTION TITLE -->
+    <div class="section-title">
+        <h2>CBSE Norms & Policies</h2>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+        <div class="card">
+            <div class="icon"><i class="fa-solid fa-book-open"></i></div>
+            <h3>CBSE Norms Education</h3>
+            <p>Guidelines and educational norms prescribed by CBSE for affiliated schools.</p>
+            <a href="#">View Details</a>
+        </div>
+
+        <div class="card">
+            <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <h3>Professional Standards for Teachers</h3>
+            <p>National Professional Standards for Teachers focusing on quality teaching.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="card">
+            <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Elementary Learning Outcomes</h3>
+            <p>Learning outcomes and competencies for elementary stage education.</p>
+            <a href="#">Explore</a>
+        </div>
+
+        <div class="card">
+            <div class="icon"><i class="fa-solid fa-school"></i></div>
+            <h3>Secondary Stage Outcomes</h3>
+            <p>CBSE prescribed learning outcomes for secondary level students.</p>
+            <a href="#">Explore</a>
+        </div>
+
+        <div class="card">
+            <div class="icon"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h3>MP RTE Rules</h3>
+            <p>Right to Education rules and regulations applicable in Madhya Pradesh.</p>
+            <a href="#">View Rules</a>
+        </div>
+
+        <div class="card">
+            <div class="icon"><i class="fa-solid fa-child-reaching"></i></div>
+            <h3>National ECCE</h3>
+            <p>Early Childhood Care & Education framework and foundational learning.</p>
+            <a href="#">Know More</a>
+        </div>
+
+        <div class="card">
+            <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>National Education Policy 2020</h3>
+            <p>Transformative reforms and educational vision under NEP 2020.</p>
+            <a href="#">Read Policy</a>
+        </div>
+
+        <div class="card">
+            <div class="icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3>Mental Health & Wellbeing</h3>
+            <p>CBSE initiatives and resources for mental health awareness in schools.</p>
+            <a href="#">View Resource</a>
+        </div>
+
+        <div class="card">
+            <div class="icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <h3>FLN NIPUN Bharat</h3>
+            <p>Foundational Literacy and Numeracy mission under NIPUN Bharat.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="card">
+            <div class="icon"><i class="fa-solid fa-book"></i></div>
+            <h3>Handbook for Teachers</h3>
+            <p>Professional teaching practices and guidance handbook for educators.</p>
+            <a href="#">Open Handbook</a>
+        </div>
+
+        <div class="card">
+            <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>POSCO ACT</h3>
+            <p>Sexual Harassment & POCSO Act awareness and child safety regulations.</p>
+            <a href="#">Read Guidelines</a>
+        </div>
+
+    </div>
+
+    <!-- IMPORTANT LINKS -->
+    <div class="links-section">
+
+        <div class="section-title">
+            <h2>Important Links</h2>
+        </div>
+
+        <div class="links-box">
+
+            <div class="links">
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-link"></i> CBSE</a>
+                </div>
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-file-lines"></i> CBSE Circulars</a>
+                </div>
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-book-open-reader"></i> CBSE Academic</a>
+                </div>
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-users"></i> Training / Capacity Building Portal</a>
+                </div>
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-square-poll-vertical"></i> CBSE Result</a>
+                </div>
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-laptop-file"></i> PRASHIKSHAN TRIVENI</a>
+                </div>
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-cloud"></i> CBSE DigiLocker</a>
+                </div>
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-book"></i> NCERT E-Books</a>
+                </div>
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-chart-line"></i> AQAD</a>
+                </div>
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-award"></i> School Quality Assessment</a>
+                </div>
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-file-circle-check"></i> SQAA Hand Book</a>
+                </div>
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-school-circle-check"></i> CBSE SAFAL</a>
+                </div>
+
+                <div class="link-item">
+                    <a href="#"><i class="fa-solid fa-chart-column"></i> CBSE NAS</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>© 2026 Cambridge School | CBSE Norms & Educational Resources</p>
+</div>
+
+</body>
+</html>

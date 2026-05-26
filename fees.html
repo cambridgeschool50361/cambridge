@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fee Structure 2026-27 | Cambridge School</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    overflow-x:hidden;
+    color:#222;
+}
+
+/* HERO SECTION */
+
+.hero{
+    position:relative;
+    height:50vh;
+    background:url(https://scontent.frpr5-1.fna.fbcdn.net/v/t39.30808-6/606026916_2288176708262526_7003923672729910369_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=tPWmhjBgu-sQ7kNvwGxYacv&_nc_oc=AdoSzgOU2hh4F3gyiQzWsqErToVf2nGsfSPi5FUeCJJzXbrxHJmcahdGKYUMKiy6pVczmkomA0eUyixmjmOvTZZu&_nc_zt=23&_nc_ht=scontent.frpr5-1.fna&_nc_gid=H0XLnWG29Lm-leZlsezP7A&_nc_ss=7b2a8&oh=00_Af5uaaKET9Y3qy1RYM794DlEqyL1zJhoMy786E7ZP2oBTg&oe=6A15C6F3) center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:#fff;
+}
+
+.hero-content h1{
+    font-size:3.5rem;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.hero-content p{
+    margin-top:15px;
+    font-size:1.1rem;
+    opacity:0.9;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:2.6rem;
+    color:#0d2c54;
+    font-weight:700;
+}
+
+.section-title p{
+    color:#666;
+    margin-top:10px;
+}
+
+/* MAIN SECTION */
+
+.fees-section{
+    padding:80px 20px;
+}
+
+/* TABLE CARD */
+
+.table-card{
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    animation:fadeUp 1s ease;
+}
+
+.table-header{
+    background:linear-gradient(135deg,#0d2c54,#1565c0);
+    color:white;
+    padding:25px;
+    text-align:center;
+}
+
+.table-header h3{
+    margin:0;
+    font-weight:700;
+    font-size:2rem;
+}
+
+table{
+    margin:0;
+}
+
+.table thead{
+    background:#0d6efd;
+    color:white;
+}
+
+.table th,
+.table td{
+    padding:18px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.table tbody tr:hover{
+    background:#f1f7ff;
+    transition:0.3s;
+}
+
+/* INFO CARDS */
+
+.info-grid{
+    margin-top:50px;
+}
+
+.info-card{
+    background:white;
+    border-radius:22px;
+    padding:30px;
+    height:100%;
+    transition:0.4s ease;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    position:relative;
+    overflow:hidden;
+}
+
+.info-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.info-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(to right,#0d6efd,#00c6ff);
+}
+
+.info-icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#0d6efd,#00c6ff);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.info-card h4{
+    font-weight:600;
+    margin-bottom:15px;
+    color:#0d2c54;
+}
+
+.info-card p{
+    color:#555;
+    line-height:1.8;
+}
+
+/* NOTICE BOX */
+
+.notice-box{
+    margin-top:60px;
+    background:linear-gradient(135deg,#0d2c54,#124c91);
+    color:white;
+    padding:40px;
+    border-radius:25px;
+    text-align:left;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.notice-box h3{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.notice-box p{
+    margin:0;
+    font-size:1.1rem;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#071c36;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:70px;
+}
+
+.footer p{
+    margin:0;
+    font-size:14px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:2.4rem;
+}
+
+.section-title h2{
+    font-size:2rem;
+}
+
+.table th,
+.table td{
+    font-size:14px;
+    padding:12px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Fee Structure</h1>
+        <p>Academic Session 2026-27</p>
+    </div>
+</section>
+
+<!-- MAIN SECTION -->
+
+<section class="fees-section">
+
+<div class="container">
+
+<div class="section-title">
+    <h2>School Fee Structure</h2>
+    <p>Transparent and convenient fee structure for all classes.</p>
+</div>
+
+<!-- FEES TABLE -->
+
+<div class="table-card">
+
+<div class="table-header">
+    <h3>Tuition Fee Details</h3>
+</div>
+
+<div class="table-responsive">
+
+<table class="table table-bordered align-middle">
+
+<thead>
+<tr>
+<th>Head</th>
+<th>Nur-UKG</th>
+<th>Class I-V</th>
+<th>Class VI-VIII</th>
+<th>Class IX-X</th>
+<th>Class XI-XII</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td><strong>Tuition Fee (Per Month)</strong></td>
+<td>₹1970</td>
+<td>₹2510</td>
+<td>₹2630</td>
+<td>₹2880</td>
+<td>₹3490</td>
+</tr>
+
+<tr>
+<td><strong>Tuition Fee (10 Months)</strong></td>
+<td>₹19,700</td>
+<td>₹25,100</td>
+<td>₹26,300</td>
+<td>₹28,800</td>
+<td>₹34,900</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- INSTALLMENT TABLE -->
+
+<div class="table-card mt-5">
+
+<div class="table-header">
+    <h3>Installment Details</h3>
+</div>
+
+<div class="table-responsive">
+
+<table class="table table-bordered align-middle">
+
+<thead>
+<tr>
+<th>Class</th>
+<th>1st To 15th April</th>
+<th>1st To 15th September</th>
+<th>1st To 15th January</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td><strong>Nur to UKG</strong></td>
+<td>₹8,000</td>
+<td>₹7,000</td>
+<td>₹4,700</td>
+</tr>
+
+<tr>
+<td><strong>Class I-V</strong></td>
+<td>₹10,000</td>
+<td>₹8,000</td>
+<td>₹7,100</td>
+</tr>
+
+<tr>
+<td><strong>Class VI-VIII</strong></td>
+<td>₹11,000</td>
+<td>₹8,500</td>
+<td>₹6,800</td>
+</tr>
+
+<tr>
+<td><strong>Class IX-X</strong></td>
+<td>₹12,000</td>
+<td>₹10,000</td>
+<td>₹6,800</td>
+</tr>
+
+<tr>
+<td><strong>Class XI-XII</strong></td>
+<td>₹13,000</td>
+<td>₹12,000</td>
+<td>₹9,900</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- INFO CARDS -->
+
+<div class="row g-4 info-grid">
+
+<div class="col-lg-6">
+<div class="info-card">
+
+<div class="info-icon">
+<i class="fa-solid fa-credit-card"></i>
+</div>
+
+<h4>Fee Payment Mode</h4>
+
+<p>
+Fee can be paid through Cash, Cheque, Net Banking,
+UPI, RTGS, NEFT, CHQ or DD for the convenience of parents.
+</p>
+
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="info-card">
+
+<div class="info-icon">
+<i class="fa-solid fa-calendar-check"></i>
+</div>
+
+<h4>Fee Installment Facility</h4>
+
+<p>
+Fee installments can be paid on monthly basis
+or quarterly basis as desired by the parents.
+</p>
+
+</div>
+</div>
+
+</div>
+
+<!-- NOTICE -->
+
+<div class="notice-box">
+
+<h3>Important Notice</h3>
+
+<p>
+1. Parents are requested to deposit the fees within the due dates
+to avoid inconvenience and maintain smooth academic activities.
+</p>
+
+<p>
+2. Parents are requested to contact office in case of any confusion.
+</p>
+
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<div class="footer">
+    <p>© 2026 Cambridge School. All Rights Reserved.</p>
+</div>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

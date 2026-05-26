@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Book List Download | Cambridge School</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1400&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    min-height:100vh;
+    color:white;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:50px 20px 30px;
+}
+
+.header h1{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.header p{
+    color:#ddd;
+    font-size:17px;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding-bottom:60px;
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:22px;
+    padding:35px 25px;
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* ICON */
+.icon{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00c853,#64dd17);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+    margin-bottom:20px;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+/* TITLE */
+.card h2{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#e6e6e6;
+    line-height:1.7;
+    margin-bottom:25px;
+    font-size:15px;
+}
+
+/* BUTTON */
+.download-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 24px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#ff9800,#ff5722);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(255,87,34,0.35);
+}
+
+.download-btn:hover{
+    transform:scale(1.08);
+    background:linear-gradient(135deg,#ff5722,#ff9800);
+}
+
+/* GLOW */
+.card::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    top:-40px;
+    right:-40px;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:25px;
+    color:#ddd;
+    font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.header h1{
+    font-size:32px;
+}
+
+.card{
+    padding:28px 20px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>📚 Book List Download</h1>
+    <p>Select your class group and download the PDF book list.</p>
+</div>
+
+<!-- CARDS -->
+<div class="container">
+
+    <!-- NUR TO UKG -->
+    <div class="card">
+        <div class="icon">
+            <i class="fa-solid fa-child-reaching"></i>
+        </div>
+
+        <h2>Nursery to UKG</h2>
+
+        <p>
+            Download complete book list for Nursery, LKG and UKG classes in PDF format.
+        </p>
+
+        <a href="D:\Projects\website1\images\Book List Nur to UKG.pdf" class="download-btn" download>
+            <i class="fa-solid fa-download"></i>
+            Download PDF
+        </a>
+    </div>
+
+    <!-- 1 TO 8 -->
+    <div class="card">
+        <div class="icon">
+            <i class="fa-solid fa-book-open-reader"></i>
+        </div>
+
+        <h2>Class 1 to 8</h2>
+
+        <p>
+            Download updated academic book list for classes 1st to 8th.
+        </p>
+
+        <a href="D:\Projects\website1\images\Book List 1st to 8th.pdf" class="download-btn" download>
+            <i class="fa-solid fa-download"></i>
+            Download PDF
+        </a>
+    </div>
+
+    <!-- 9 TO 12 -->
+    <div class="card">
+        <div class="icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <h2>Class 9 to 12</h2>
+
+        <p>
+            Download stream-wise and class-wise book list for secondary and senior secondary classes.
+        </p>
+
+        <a href="D:\Projects\website1\images\book list NCERT.pdf"" class="download-btn" download>
+            <i class="fa-solid fa-download"></i>
+            Download PDF
+        </a>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Cambridge School | All Rights Reserved
+</div>
+
+</body>
+</html>

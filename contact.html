@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | Cambridge School</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    overflow-x:hidden;
+}
+
+
+/* TOP NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;   /* 🔥 define exact height */
+    z-index: 1000;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px;
+    background: rgba(0, 100, 0, 0.9);
+    color: white;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+}
+
+/* HOVER UNDERLINE */
+.top-nav a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #2ecc71;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.top-nav a:hover::after {
+    width: 100%;
+}
+
+
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+/* MENU BOX */
+/* DROPDOWN MENU */
+.dropdown-menu {
+    position: absolute;
+    top: 30px;
+    left: 0;
+
+    display: none;
+    flex-direction: column;
+
+    background: white;
+
+    min-width: 260px;   /* 🔥 increase width */
+    white-space: nowrap; /* 🔥 PREVENT LINE BREAK */
+
+    border-radius: 6px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* DROPDOWN LINKS */
+.dropdown-menu a {
+    padding: 12px 20px;
+    color: black;
+    text-decoration: none;
+
+    white-space: nowrap;   /* 🔥 FORCE ONE LINE */
+}
+/* SAME UNDERLINE INSIDE DROPDOWN */
+.dropdown-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #2ecc71;
+    left: 15px;
+    bottom: 5px;
+    transition: 0.3s;
+}
+
+.dropdown-menu a:hover::after {
+    width: 70%;
+}
+
+/* HOVER SHOW */
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* ================= HEADER ================= */
+
+.contact-hero{
+    position:relative;
+    height:60vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop');
+    
+    background-size:cover;
+    background-position:center;
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.contact-hero::before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:linear-gradient(135deg,#003366aa,#0056b3aa);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    animation:fadeIn 1.5s ease;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+/* ================= CONTACT SECTION ================= */
+
+.contact-section{
+    margin-top:-80px;
+    position:relative;
+    z-index:5;
+    padding-bottom:70px;
+}
+
+.contact-card{
+    background:white;
+    border-radius:25px;
+    padding:40px 30px;
+    text-align:center;
+    transition:0.4s;
+    height:100%;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    position:relative;
+    overflow:hidden;
+}
+
+.contact-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(to right,#003366,#007bff);
+}
+
+.contact-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.contact-icon{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#003366,#007bff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:35px;
+    margin-bottom:25px;
+    transition:0.4s;
+}
+
+.contact-card:hover .contact-icon{
+    transform:rotate(360deg) scale(1.1);
+}
+
+.contact-card h3{
+    font-weight:700;
+    color:#003366;
+    margin-bottom:20px;
+}
+
+.contact-card p{
+    color:#555;
+    font-size:1rem;
+    margin-bottom:10px;
+}
+
+.contact-card a{
+    text-decoration:none;
+    color:#007bff;
+    font-weight:500;
+}
+
+.contact-card a:hover{
+    color:#003366;
+}
+
+/* ================= SOCIAL ICONS ================= */
+
+.social-icons{
+    margin-top:20px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    background:#f0f4ff;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    margin:5px;
+    color:#003366;
+    font-size:20px;
+    transition:0.4s;
+}
+
+.social-icons a:hover{
+    background:#003366;
+    color:white;
+    transform:translateY(-5px);
+}
+
+/* ================= MAP ================= */
+
+.map-section{
+    padding:0 20px 70px;
+}
+
+.map-container{
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+iframe{
+    width:100%;
+    height:450px;
+    border:0;
+}
+
+/* ================= QUICK CONTACT BAR ================= */
+
+.quick-bar{
+    background:linear-gradient(135deg,#003366,#0056b3);
+    padding:20px;
+    color:white;
+    border-radius:20px;
+    margin-top:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.quick-bar i{
+    margin-right:10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#001f3f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .contact-section{
+        margin-top:-40px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+<!-- TOP NAVBAR -->
+<header id="navbar">
+    <nav class="top-nav">
+
+        <a href="D:\Projects\website1\index.html">Home</a>
+
+        <!-- ABOUT DROPDOWN -->
+        <div class="dropdown">
+            <a href="#">About▾</a>
+            <div class="dropdown-menu">
+                <a href="D:\Projects\website1\chairperson.html">Chairperson Message</a>
+                <a href="D:\Projects\website1\Principal.html">Principal Message</a>
+                <a href="#">Information About</a>
+                <a href="#">Vision & Mission</a>
+                <a href="#">Management Committee</a>
+            </div>
+            </div>
+
+	<!-- Information cell -->
+        <div class="dropdown">
+            <a href="#">Information cell▾</a>
+                <div class="dropdown-menu">
+                <a href="#">Rules & Regulation</a>
+                <a href="#">Fee Structure</a>
+                <a href="#">Admission Procedure</a>
+		<a href="#">Book Letter</a>
+                <a href="#">Book List</a>
+                <a href="#">Shop List book and dress</a>
+                <a href="#">CBSE Norms of Education</a>
+                <a href="#">School Dress</a>
+             </div> 
+	     </div>
+
+       <!-- Academics DROPDOWN -->
+        <div class="dropdown">
+            <a href="#">Academics▾</a>
+            <div class="dropdown-menu">
+                <a href="#">Examination</a>
+                <a href="#">Circulars</a>
+                <a href="#">Books</a>
+             </div> 
+	     </div>
+
+	<a href="#"> Faculty </a>
+	<a href="#"> Campus & Facilities </a>
+        <a href="#"> Admissions </a>
+        <a href="D:\Projects\website1\contact.html"> Contact </a>
+	
+    </nav>
+</header>
+<!-- HERO SECTION -->
+
+<section class="contact-hero">
+
+    <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>Cambridge School, Dabra</p>
+    </div>
+
+</section>
+
+<!-- CONTACT CARDS -->
+
+<section class="contact-section container">
+
+    <div class="row g-4">
+
+        <!-- ADDRESS -->
+
+        <div class="col-lg-4 col-md-6">
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>School Address</h3>
+
+                <p>Cambridge School</p>
+                <p>Dabra, Gwalior</p>
+                <p>Madhya Pradesh - 475110</p>
+                <p>India</p>
+
+            </div>
+
+        </div>
+
+        <!-- PHONE -->
+
+        <div class="col-lg-4 col-md-6">
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-phone-volume"></i>
+                </div>
+
+                <h3>Call Us</h3>
+
+                <p>
+                    <a href="tel:+919876543210">
+                        +91 9876543210
+                    </a>
+                </p>
+
+                <p>
+                    <a href="tel:">
+                        07524-400207
+                    </a>
+                </p>
+
+                <p>Monday - Saturday</p>
+                <p>08:00 AM - 02:00 PM</p>
+
+            </div>
+
+        </div>
+
+        <!-- EMAIL -->
+
+        <div class="col-lg-4 col-md-12">
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <h3>Email & Socials</h3>
+
+                <p>
+                    <a href="mailto:cambridge.dabra@gmail.com">
+                        cambridge.dabra@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <a href="#">
+                        www.cambridgeschool.in
+                    </a>
+                </p>
+
+                <!-- SOCIAL ICONS -->
+
+                <div class="social-icons">
+
+                    <a href="https://www.facebook.com/CAMBRIDGESCHOOLDABRACBSE/"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="https://www.instagram.com/cambridge_school__dabra/"><i class="fab fa-instagram"></i></a>
+
+                    <a href="https://www.youtube.com/@cambridgeschooldabra1273"><i class="fab fa-youtube"></i></a>
+
+                    <!---<a href="#"><i class="fab fa-linkedin-in"></i></a>--->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- QUICK BAR -->
+
+    <div class="quick-bar mt-5">
+
+        <div class="row text-center">
+
+            <div class="col-md-4">
+                <h5><i class="fa-solid fa-clock"></i> Office Hours</h5>
+                <p>Mon - Sat : 8 AM - 4 PM</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5><i class="fa-solid fa-bus"></i> Transport Facility</h5>
+                <p>Available Across Dabra City</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5><i class="fa-solid fa-shield-halved"></i> Campus Security</h5>
+                <p>24×7 CCTV Monitoring</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GOOGLE MAP -->
+
+<iframe
+    src="https://www.google.com/maps?q=Cambridge%20School%20Dabra&output=embed"
+    width="100%"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+</iframe>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Cambridge School, Dabra | Designed with Excellence
+    </p>
+
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

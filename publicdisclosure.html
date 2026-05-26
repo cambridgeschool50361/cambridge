@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mandatory Public Disclosure | Cambridge School</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    overflow-x:hidden;
+    color:#333;
+}
+
+/* HEADER */
+
+.header{
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url('images/school.jpg');
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    padding:110px 20px;
+    color:#fff;
+}
+
+.header h1{
+    font-size:48px;
+    margin-bottom:15px;
+    animation:fadeDown 1s ease;
+}
+
+.header p{
+    max-width:850px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+    animation:fadeUp 1.2s ease;
+}
+
+/* CONTAINER */
+
+.container{
+    width:94%;
+    max-width:1450px;
+    margin:60px auto;
+}
+
+/* SECTION */
+
+.section{
+    margin-bottom:60px;
+}
+
+.section-title{
+    margin-bottom:25px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.section-title i{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00695c,#26a69a);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+}
+
+.section-title h2{
+    color:#004d40;
+    font-size:34px;
+}
+
+/* TABLE */
+
+.table-container{
+    overflow-x:auto;
+    background:#fff;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:900px;
+}
+
+thead{
+    background:linear-gradient(135deg,#00695c,#00897b);
+    color:#fff;
+}
+
+thead th{
+    padding:18px;
+    text-align:left;
+    font-size:15px;
+}
+
+tbody tr{
+    border-bottom:1px solid #e5e7eb;
+    transition:0.3s;
+}
+
+tbody tr:hover{
+    background:#f0fdfa;
+}
+
+tbody td{
+    padding:16px 18px;
+    font-size:14px;
+    color:#444;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    padding:9px 18px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#00695c,#009688);
+    color:#fff;
+    text-decoration:none;
+    font-size:13px;
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    background:linear-gradient(135deg,#004d40,#00796b);
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-bottom:50px;
+}
+
+.stat-box{
+    background:#fff;
+    border-radius:22px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.stat-box:hover{
+    transform:translateY(-10px);
+}
+
+.stat-box i{
+    width:75px;
+    height:75px;
+    line-height:75px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00796b,#26a69a);
+    color:#fff;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.stat-box h3{
+    font-size:34px;
+    color:#004d40;
+}
+
+.stat-box p{
+    color:#666;
+    margin-top:8px;
+    font-size:15px;
+}
+
+/* YOUTUBE */
+
+.video-box{
+    background:#fff;
+    padding:35px;
+    border-radius:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.video-box iframe{
+    width:100%;
+    max-width:900px;
+    height:500px;
+    border:none;
+    border-radius:20px;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#002b24;
+    color:#fff;
+    text-align:center;
+    padding:28px 15px;
+    margin-top:70px;
+}
+
+.footer p{
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* ANIMATION */
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .header h1{
+        font-size:34px;
+    }
+
+    .header p{
+        font-size:15px;
+    }
+
+    .section-title h2{
+        font-size:26px;
+    }
+
+    .video-box iframe{
+        height:250px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+    <h1>Mandatory Public Disclosure</h1>
+    <p>
+        Cambridge School is committed to transparency, academic excellence,
+        safety standards and compliance with CBSE affiliation norms.
+    </p>
+</div>
+
+<!-- MAIN CONTAINER -->
+
+<div class="container">
+
+    <!-- STATS -->
+
+    <div class="stats">
+
+        <div class="stat-box">
+            <i class="fa-solid fa-school"></i>
+            <h3>55</h3>
+            <p>Total Teachers</p>
+        </div>
+
+        <div class="stat-box">
+            <i class="fa-solid fa-user-graduate"></i>
+            <h3>100%</h3>
+            <p>CBSE Affiliated</p>
+        </div>
+
+        <div class="stat-box">
+            <i class="fa-solid fa-building"></i>
+            <h3>6488</h3>
+            <p>Campus Area (Sq. Mtr)</p>
+        </div>
+
+        <div class="stat-box">
+            <i class="fa-solid fa-flask"></i>
+            <h3>6</h3>
+            <p>Laboratories</p>
+        </div>
+
+    </div>
+
+    <!-- GENERAL INFORMATION -->
+
+    <div class="section">
+
+        <div class="section-title">
+            <i class="fa-solid fa-circle-info"></i>
+            <h2>General Information</h2>
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Information</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Name of the School</td>
+                        <td>CAMBRIDGE SCHOOL</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Affiliation No.</td>
+                        <td>1030406</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>School Code</td>
+                        <td>50361</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Complete Address</td>
+                        <td>Gwalior - Jhansi Road, Dabra, Gwalior (M.P.) - 475110</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Principal Name & Qualification</td>
+                        <td>Mrs. Surekha Maheshwari, M.A., B.ED</td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>School Email ID</td>
+                        <td>cambridge.dabra@gmail.com</td>
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td>Contact Details</td>
+                        <td>07524 - 400207</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- DOCUMENTS -->
+
+    <div class="section">
+
+        <div class="section-title">
+            <i class="fa-solid fa-file-lines"></i>
+            <h2>Documents & Information</h2>
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Documents</th>
+                        <th>View / Download</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Affiliation / Upgradation Letter</td>
+                        <td><a href="#" class="btn">View</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Society / Trust Registration Certificate</td>
+                        <td><a href="#" class="btn">Download</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>No Objection Certificate (NOC)</td>
+                        <td><a href="#" class="btn">View</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Recognition Certificate under RTE Act 2009</td>
+                        <td><a href="#" class="btn">Download</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Building Safety Certificate</td>
+                        <td><a href="#" class="btn">View</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>Fire Safety Certificate</td>
+                        <td><a href="#" class="btn">Download</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td>DEO Certificate / Self Certification</td>
+                        <td>-</td>
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>Water, Health & Sanitation Certificates</td>
+                        <td><a href="#" class="btn">View</a></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- RESULT CLASS X -->
+
+    <div class="section">
+
+        <div class="section-title">
+            <i class="fa-solid fa-chart-column"></i>
+            <h2>Result Class X</h2>
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Registered Students</th>
+                        <th>Students Passed</th>
+                        <th>Pass Percentage</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr><td>2019</td><td>82</td><td>80</td><td>97.56%</td></tr>
+                    <tr><td>2020</td><td>73</td><td>71</td><td>97.26%</td></tr>
+                    <tr><td>2021</td><td>90</td><td>90</td><td>100%</td></tr>
+                    <tr><td>2022</td><td>125</td><td>125</td><td>100%</td></tr>
+                    <tr><td>2023</td><td>90</td><td>90</td><td>100%</td></tr>
+                    <tr><td>2024</td><td>85</td><td>84</td><td>98%</td></tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- RESULT CLASS XII -->
+
+    <div class="section">
+
+        <div class="section-title">
+            <i class="fa-solid fa-trophy"></i>
+            <h2>Result Class XII</h2>
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Registered Students</th>
+                        <th>Students Passed</th>
+                        <th>Pass Percentage</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr><td>2019</td><td>112</td><td>82</td><td>73.21%</td></tr>
+                    <tr><td>2020</td><td>113</td><td>100</td><td>88.5%</td></tr>
+                    <tr><td>2021</td><td>124</td><td>124</td><td>100%</td></tr>
+                    <tr><td>2022</td><td>102</td><td>101</td><td>99.01%</td></tr>
+                    <tr><td>2023</td><td>117</td><td>114</td><td>97.43%</td></tr>
+                    <tr><td>2024</td><td>81</td><td>81</td><td>100%</td></tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- STAFF -->
+
+    <div class="section">
+
+        <div class="section-title">
+            <i class="fa-solid fa-users"></i>
+            <h2>Staff Teaching</h2>
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Information</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr><td>Principal</td><td>1</td></tr>
+                    <tr><td>Total Teachers</td><td>55</td></tr>
+                    <tr><td>PGT</td><td>10</td></tr>
+                    <tr><td>TGT</td><td>10</td></tr>
+                    <tr><td>PRT</td><td>27</td></tr>
+                    <tr><td>Teacher Section Ratio</td><td>1:1.5</td></tr>
+                    <tr><td>Special Educator</td><td>1</td></tr>
+                    <tr><td>Counsellor & Wellness Teacher</td><td>1</td></tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- INFRASTRUCTURE -->
+
+    <div class="section">
+
+        <div class="section-title">
+            <i class="fa-solid fa-building"></i>
+            <h2>School Infrastructure</h2>
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Information</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Total Campus Area</td>
+                        <td>6488 Sq. Mtr</td>
+                    </tr>
+
+                    <tr>
+                        <td>Class Rooms</td>
+                        <td>38 Rooms, 46 Sq. Mtr</td>
+                    </tr>
+
+                    <tr>
+                        <td>Laboratories Including Computer Labs</td>
+                        <td>6 Labs, 56 Sq. Mtr</td>
+                    </tr>
+
+                    <tr>
+                        <td>Internet Facility</td>
+                        <td>YES</td>
+                    </tr>
+
+                    <tr>
+                        <td>No. of Girls Toilets</td>
+                        <td>10</td>
+                    </tr>
+
+                    <tr>
+                        <td>No. of Boys Toilets</td>
+                        <td>12</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- YOUTUBE VIDEO -->
+
+    <div class="section">
+
+        <div class="section-title">
+            <i class="fa-brands fa-youtube"></i>
+            <h2>School Infrastructure Inspection Video</h2>
+        </div>
+
+        <div class="video-box">
+
+            <iframe
+            src="https://www.youtube.com/embed/NyCNAJ-saVE"
+            allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+    <p>© 2026 Cambridge School | Mandatory Public Disclosure</p>
+</div>
+
+</body>
+</html>

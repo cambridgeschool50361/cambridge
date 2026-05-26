@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Examination Portal | Cambridge School</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef3f8;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+.header{
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url('images/exam-bg.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    padding:90px 20px;
+    text-align:center;
+    color:#fff;
+}
+
+.header h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.header p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* CONTAINER */
+
+.container{
+    width:92%;
+    max-width:1400px;
+    margin:60px auto;
+}
+
+/* SEARCH AREA */
+
+.search-area{
+    background:#fff;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    margin-bottom:50px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* INPUT */
+
+.search-box{
+    position:relative;
+}
+
+.search-box input,
+.search-box select{
+    width:100%;
+    padding:15px 18px;
+    border:none;
+    border-radius:14px;
+    background:#f5f7fb;
+    outline:none;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.search-box input:focus,
+.search-box select:focus{
+    background:#fff;
+    box-shadow:0 0 0 3px rgba(0,150,136,0.15);
+}
+
+/* GRID */
+
+.exam-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+/* CARD */
+
+.exam-card{
+    background:#fff;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.exam-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* TOP */
+
+.card-top{
+    background:linear-gradient(135deg,#00695c,#009688);
+    padding:25px;
+    color:#fff;
+    position:relative;
+}
+
+.card-top i{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.card-top h2{
+    font-size:24px;
+}
+
+.exam-type{
+    position:absolute;
+    right:20px;
+    top:20px;
+    background:rgba(255,255,255,0.2);
+    padding:7px 15px;
+    border-radius:30px;
+    font-size:12px;
+}
+
+/* CONTENT */
+
+.card-content{
+    padding:28px;
+}
+
+.card-content p{
+    margin-bottom:12px;
+    color:#555;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.card-content strong{
+    color:#004d40;
+}
+
+/* BUTTON */
+
+.download-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:15px;
+    padding:12px 22px;
+    border-radius:40px;
+    background:linear-gradient(135deg,#00695c,#009688);
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.4s;
+}
+
+.download-btn:hover{
+    background:linear-gradient(135deg,#004d40,#00796b);
+    transform:scale(1.05);
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    margin-bottom:30px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.section-title i{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00695c,#009688);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+}
+
+.section-title h1{
+    color:#004d40;
+    font-size:38px;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:70px;
+    background:#002b24;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .header h1{
+        font-size:36px;
+    }
+
+    .section-title h1{
+        font-size:28px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+
+    <h1>Examination Portal</h1>
+
+    <p>
+        Search and download class-wise examination date sheets,
+        syllabus and academic documents for PT1, Half Yearly,
+        PT2, Annual Exams and Pre Boards.
+    </p>
+
+</div>
+
+<!-- CONTAINER -->
+
+<div class="container">
+
+    <!-- TITLE -->
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-graduation-cap"></i>
+
+        <h1>Academic Downloads</h1>
+
+    </div>
+
+    <!-- SEARCH -->
+
+    <div class="search-area">
+
+        <!-- CLASS SEARCH -->
+
+        <div class="search-box">
+            <input type="text" id="classSearch"
+            placeholder="Search Class Name...">
+        </div>
+
+        <!-- EXAM TYPE -->
+
+        <div class="search-box">
+
+            <select id="examFilter">
+
+                <option value="">Select Exam Type</option>
+
+                <option value="PT1">PT1</option>
+
+                <option value="Half Yearly">Half Yearly</option>
+
+                <option value="PT2">PT2</option>
+
+                <option value="Annual">Annual</option>
+
+                <option value="Pre Board">Pre Board</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <!-- GRID -->
+
+    <div class="exam-grid" id="examGrid">
+
+        <!-- CARD 1 -->
+
+        <div class="exam-card"
+        data-class="Class I - V"
+        data-exam="PT1">
+
+            <div class="card-top">
+
+                <span class="exam-type">PT1</span>
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <h2>Class I - V Date Sheet</h2>
+
+            </div>
+
+            <div class="card-content">
+
+                <p>
+                    <strong>Exam:</strong> PT1 Examination
+                </p>
+
+                <p>
+                    <strong>Session:</strong> 2026-27
+                </p>
+
+                <p>
+                    Download class-wise PT1 examination schedule.
+                </p>
+
+                <a href="#" class="download-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="exam-card"
+        data-class="Class VI - VIII"
+        data-exam="Half Yearly">
+
+            <div class="card-top">
+
+                <span class="exam-type">Half Yearly</span>
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <h2>Class VI - VIII Syllabus</h2>
+
+            </div>
+
+            <div class="card-content">
+
+                <p>
+                    <strong>Exam:</strong> Half Yearly
+                </p>
+
+                <p>
+                    <strong>Subjects:</strong> All Subjects
+                </p>
+
+                <p>
+                    Download half yearly syllabus PDF.
+                </p>
+
+                <a href="#" class="download-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="exam-card"
+        data-class="Class IX - X"
+        data-exam="Pre Board">
+
+            <div class="card-top">
+
+                <span class="exam-type">Pre Board</span>
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <h2>Class IX - X Pre Board</h2>
+
+            </div>
+
+            <div class="card-content">
+
+                <p>
+                    <strong>Exam:</strong> Pre Board
+                </p>
+
+                <p>
+                    <strong>Applicable:</strong> Class IX & X
+                </p>
+
+                <p>
+                    Download pre board date sheet and instructions.
+                </p>
+
+                <a href="#" class="download-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="exam-card"
+        data-class="Class XI - XII"
+        data-exam="Annual">
+
+            <div class="card-top">
+
+                <span class="exam-type">Annual</span>
+
+                <i class="fa-solid fa-book"></i>
+
+                <h2>Class XI - XII Annual Syllabus</h2>
+
+            </div>
+
+            <div class="card-content">
+
+                <p>
+                    <strong>Exam:</strong> Annual Examination
+                </p>
+
+                <p>
+                    <strong>Streams:</strong> Science / Commerce
+                </p>
+
+                <p>
+                    Download annual syllabus and exam pattern.
+                </p>
+
+                <a href="#" class="download-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 5 -->
+
+        <div class="exam-card"
+        data-class="Nursery - UKG"
+        data-exam="PT2">
+
+            <div class="card-top">
+
+                <span class="exam-type">PT2</span>
+
+                <i class="fa-solid fa-school"></i>
+
+                <h2>Nursery - UKG Date Sheet</h2>
+
+            </div>
+
+            <div class="card-content">
+
+                <p>
+                    <strong>Exam:</strong> PT2
+                </p>
+
+                <p>
+                    <strong>Classes:</strong> Nursery to UKG
+                </p>
+
+                <p>
+                    Download PT2 exam schedule for junior classes.
+                </p>
+
+                <a href="#" class="download-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+    © 2026 Cambridge School | Examination Portal
+
+</div>
+
+<!-- SEARCH SCRIPT -->
+
+<script>
+
+const classSearch = document.getElementById("classSearch");
+const examFilter = document.getElementById("examFilter");
+const cards = document.querySelectorAll(".exam-card");
+
+function filterCards(){
+
+    let searchValue = classSearch.value.toLowerCase();
+    let examValue = examFilter.value.toLowerCase();
+
+    cards.forEach(card => {
+
+        let className = card.dataset.class.toLowerCase();
+        let examType = card.dataset.exam.toLowerCase();
+
+        let matchClass = className.includes(searchValue);
+        let matchExam = examValue === "" || examType.includes(examValue);
+
+        if(matchClass && matchExam){
+            card.style.display = "block";
+        }
+        else{
+            card.style.display = "none";
+        }
+
+    });
+
+}
+
+classSearch.addEventListener("keyup", filterCards);
+examFilter.addEventListener("change", filterCards);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>School Books List</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#eef4ff,#dbeafe);
+    min-height:100vh;
+    padding:40px 20px;
+}
+
+/* Header */
+
+.header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.header h1{
+    font-size:42px;
+    color:#1e3a8a;
+    margin-bottom:10px;
+}
+
+.header p{
+    color:#475569;
+    font-size:17px;
+}
+
+/* Main Container */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Selection Card */
+
+.selection-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom:30px;
+}
+
+.selection-card h2{
+    margin-bottom:18px;
+    color:#0f172a;
+}
+
+select{
+    width:100%;
+    padding:15px;
+    border-radius:12px;
+    border:2px solid #cbd5e1;
+    font-size:16px;
+    font-weight:500;
+    outline:none;
+    transition:0.3s;
+    background:#f8fafc;
+}
+
+select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 10px rgba(37,99,235,0.2);
+}
+
+/* Books Section */
+
+.books-section{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+/* Book Card */
+
+.book-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.book-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.12);
+}
+
+.book-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
+}
+
+.book-icon{
+    width:65px;
+    height:65px;
+    border-radius:15px;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.book-card h3{
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.book-card p{
+    color:#64748b;
+    font-size:15px;
+    line-height:1.6;
+}
+
+.book-btn{
+    display:inline-block;
+    margin-top:18px;
+    padding:10px 18px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+    font-weight:500;
+}
+
+.book-btn:hover{
+    background:#1d4ed8;
+}
+
+/* Footer */
+
+.footer{
+    text-align:center;
+    margin-top:50px;
+    color:#64748b;
+    font-size:14px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .header h1{
+        font-size:32px;
+    }
+
+    .selection-card{
+        padding:20px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- Header -->
+
+<div class="header">
+    <h1>School Books List</h1>
+    <p>Select your class and explore the list of books</p>
+</div>
+
+<div class="container">
+
+    <!-- Dropdown Section -->
+
+    <div class="selection-card">
+
+        <h2>Select Class</h2>
+
+        <select id="classSelect" onchange="showBooks()">
+            <option value="">-- Choose Class --</option>
+            <option value="Nursery">Nursery</option>
+            <option value="LKG">LKG</option>
+            <option value="UKG">UKG</option>
+            <option value="Class 1">Class 1</option>
+            <option value="Class 2">Class 2</option>
+            <option value="Class 3">Class 3</option>
+            <option value="Class 4">Class 4</option>
+            <option value="Class 5">Class 5</option>
+            <option value="Class 6">Class 6</option>
+            <option value="Class 7">Class 7</option>
+            <option value="Class 8">Class 8</option>
+            <option value="Class 9">Class 9</option>
+            <option value="Class 10">Class 10</option>
+            <option value="Class 11 Science">Class 11 - Science</option>
+	    <option value="Class 11 Commerce">Class 11 - Commerce</option>
+	    <option value="Class 12 Science">Class 12 - Science</option>
+	    <option value="Class 12 Commerce">Class 12 - Commerce</option>
+        </select>
+
+    </div>
+
+    <!-- Books Display -->
+
+    <div class="books-section" id="booksSection">
+
+        <!-- Dynamic Cards Will Appear Here -->
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+
+<div class="footer">
+    © 2026 School Book Portal | Designed Professionally
+</div>
+
+<script>
+
+/* Books Data */
+
+const booksData = {
+
+    "Nursery":[
+        "Alphabet Book",
+        "Numbers Book",
+        "Rhymes Book"
+    ],
+
+    "LKG":[
+        "English Primer",
+        "Math Skills",
+        "Drawing Book"
+    ],
+
+    "UKG":[
+        "English Reader",
+        "Hindi Reader",
+        "General Awareness"
+    ],
+
+    "Class 1":[
+        "English",
+        "Hindi",
+        "Mathematics",
+        "EVS"
+    ],
+
+    "Class 2":[
+        "English",
+        "Hindi",
+        "Mathematics",
+        "Computer"
+    ],
+
+    "Class 3":[
+        "English",
+        "Hindi",
+        "Mathematics",
+        "Science",
+        "GK"
+    ],
+
+    "Class 4":[
+        "English",
+        "Hindi",
+        "Mathematics",
+        "Science",
+        "Social Studies"
+    ],
+
+    "Class 5":[
+        "English",
+        "Hindi",
+        "Mathematics",
+        "Science",
+        "Computer"
+    ],
+
+    "Class 6":[
+        "English",
+        "Hindi",
+        "Mathematics",
+        "Science",
+        "Social Science"
+    ],
+
+    "Class 7":[
+        "English",
+        "Hindi",
+        "Mathematics",
+        "Science",
+        "Computer"
+    ],
+
+    "Class 8":[
+        "English",
+        "Hindi",
+        "Mathematics",
+        "Science",
+        "Social Science"
+    ],
+
+    "Class 9":[
+        "English",
+        "Hindi",
+        "Mathematics",
+        "Science",
+        "IT"
+    ],
+
+    "Class 10":[
+        "English",
+        "Hindi",
+        "Mathematics",
+        "Science",
+        "Social Science",
+        "IT"
+    ],
+
+    /* REPLACE CLASS 11 & 12 DATA WITH THIS */
+
+"Class 11 Science":[
+    "Physics",
+    "Chemistry",
+    "Mathematics",
+    "Biology",
+    "Computer Science"
+],
+
+"Class 11 Commerce":[
+    "Accountancy",
+    "Business Studies",
+    "Economics",
+    "Mathematics",
+    "English"
+],
+
+"Class 12 Science":[
+    "Physics",
+    "Chemistry",
+    "Mathematics",
+    "Biology",
+    "Computer Science"
+],
+
+"Class 12 Commerce":[
+    "Accountancy",
+    "Business Studies",
+    "Economics",
+    "Mathematics",
+    "English"
+]
+
+};
+
+/* Function */
+
+function showBooks(){
+
+    const selectedClass =
+        document.getElementById("classSelect").value;
+
+    const booksSection =
+        document.getElementById("booksSection");
+
+    booksSection.innerHTML = "";
+
+    if(selectedClass === "") return;
+
+    const books = booksData[selectedClass];
+
+    books.forEach(book => {
+
+        booksSection.innerHTML += `
+
+        <div class="book-card">
+
+            <div class="book-icon">
+                📘
+            </div>
+
+            <h3>${book}</h3>
+
+            <p>
+                Recommended textbook for ${selectedClass}.
+                Click below to view the PDF book.
+            </p>
+
+            <a href="#" class="book-btn">
+                View Book
+            </a>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
