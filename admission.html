@@ -12,293 +12,15 @@
 <!-- Font Awesome -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+<link rel="stylesheet" href="style.css">
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background:#f4f7fb;
-    overflow-x:hidden;
-    color:#222;
-}
-
-/* HERO SECTION */
-
-.hero{
-    position:relative;
-    height:55vh;
-    background:url(https://scontent.frpr5-1.fna.fbcdn.net/v/t39.30808-6/618121239_2311556769257853_2033377007241705452_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=KnS-PehX3wwQ7kNvwFFfzxg&_nc_oc=AdpEcwCqlR9X5Rnw50PYwdVS1flArQalsqElJo_UK9qeUzpyXmmhGsExJmJ4DWb3Cp-b3IXgY2dWFzcn2h0-h7a-&_nc_zt=23&_nc_ht=scontent.frpr5-1.fna&_nc_gid=0raQM-pl_cDElzVafNeBug&_nc_ss=7b2a8&oh=00_Af45ddRAyic_QofpIeLKQKsfecXORpPNw7K5WR1tkUxrmA&oe=6A15C645) center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
-
-.hero::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.68);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    color:white;
-}
-
-.hero-content h1{
-    font-size:3.8rem;
-    font-weight:700;
-    letter-spacing:1px;
-}
-
-.hero-content p{
-    margin-top:15px;
-    font-size:1.1rem;
-    opacity:0.92;
-}
-
-/* SECTION */
-
-.admission-section{
-    padding:80px 20px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:2.7rem;
-    font-weight:700;
-    color:#0d2c54;
-}
-
-.section-title p{
-    color:#666;
-    margin-top:10px;
-}
-
-/* CARDS */
-
-.admission-card{
-    background:white;
-    border-radius:25px;
-    padding:40px;
-    height:100%;
-    position:relative;
-    overflow:hidden;
-    transition:0.4s ease;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-.admission-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 15px 40px rgba(0,0,0,0.12);
-}
-
-.admission-card::before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:6px;
-    background:linear-gradient(to right,#0d6efd,#00c6ff);
-}
-
-.card-icon{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#0d6efd,#00c6ff);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:34px;
-    margin-bottom:25px;
-}
-
-.admission-card h3{
-    font-size:2rem;
-    font-weight:600;
-    color:#0d2c54;
-    margin-bottom:20px;
-}
-
-.admission-card p{
-    color:#555;
-    line-height:1.9;
-    font-size:16px;
-}
-
-/* PROCESS SECTION */
-
-.process-section{
-    margin-top:70px;
-}
-
-.process-title{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.process-title h2{
-    color:#0d2c54;
-    font-weight:700;
-}
-
-.process-box{
-    background:white;
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-    transition:0.4s ease;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
-    height:100%;
-}
-
-.process-box:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.12);
-}
-
-.process-number{
-    width:60px;
-    height:60px;
-    background:linear-gradient(135deg,#0d6efd,#00c6ff);
-    border-radius:50%;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:auto;
-    font-size:24px;
-    font-weight:700;
-    margin-bottom:20px;
-}
-
-.process-box h4{
-    font-weight:600;
-    color:#0d2c54;
-    margin-bottom:15px;
-}
-
-.process-box p{
-    color:#555;
-    line-height:1.8;
-}
-
-/* NOTICE */
-
-.notice-box{
-    margin-top:70px;
-    background:linear-gradient(135deg,#0d2c54,#124c91);
-    color:white;
-    padding:45px;
-    border-radius:25px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-.notice-box h3{
-    font-weight:700;
-    margin-bottom:15px;
-}
-
-.notice-box p{
-    margin:0;
-    font-size:1.1rem;
-    line-height:1.8;
-}
-
-/* BUTTON */
-
-.btn-admission{
-    background:white;
-    color:#0d2c54;
-    border:none;
-    padding:14px 35px;
-    border-radius:50px;
-    font-weight:600;
-    margin-top:25px;
-    transition:0.3s ease;
-}
-
-.btn-admission:hover{
-    background:#0d6efd;
-    color:white;
-}
-
-/* FOOTER */
-
-.footer{
-    background:#071c36;
-    color:white;
-    text-align:center;
-    padding:18px;
-    margin-top:80px;
-}
-
-.footer p{
-    margin:0;
-    font-size:14px;
-}
-
-/* ANIMATION */
-
-.admission-card,
-.process-box{
-    animation:fadeUp 1s ease;
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-.hero-content h1{
-    font-size:2.5rem;
-}
-
-.section-title h2{
-    font-size:2rem;
-}
-
-.admission-card{
-    padding:30px;
-}
-
-.notice-box{
-    padding:30px;
-}
-
-}
-
-</style>
 </head>
+
+<body>
 <!-- TOP NAVBAR -->
 <header id="navbar">
     <nav class="top-nav">
@@ -335,24 +57,24 @@ body{
         <div class="dropdown">
             <a href="#">Academics▾</a>
             <div class="dropdown-menu">
-                <a href="#">Examination</a>
-                <a href="#">Circulars</a>
+                 <a href="examination.html">Examination</a>
+                <a href="circulars.html">Circulars</a>
              </div> 
 	     </div>
 
 	<a href="faculty.html"> Faculty </a>
 	<a href="campus.html"> Campus & Facilities </a>
-        <a href="#"> Admissions </a>
+        <a href="admission.html"> Admissions </a>
         <a href="contact.html"> Contact </a>
     </nav>
+</header>
 
-<body>
 
 <!-- HERO -->
 
-<section class="hero">
+<section class="heroad">
 
-<div class="hero-content">
+<div class="hero-contentad">
     <h1>Admission Procedure</h1>
     <p>Begin Your Child's Journey Towards Excellence</p>
 </div>
@@ -514,13 +236,15 @@ time. Incomplete forms or delayed submissions may not be considered.
 
 <!-- FOOTER -->
 
-<div class="footer">
-    <p>© 2026 Cambridge School. All Rights Reserved.</p>
-</div>
+<footer class="footer">
+<h5>© 2026 Cambridge School | Admission Procedure Page</h5>
+</footer>
 
 <!-- Bootstrap JS -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="disablerightclick.js"></script>
 
 </body>
 </html>
