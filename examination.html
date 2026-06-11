@@ -8,244 +8,64 @@
 
 <!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="style.css">
 <!-- FONT AWESOME -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background:#eef3f8;
-    overflow-x:hidden;
-}
-
-/* HEADER */
-
-.header{
-    background:
-    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-    url('images/exam-bg.jpg');
-
-    background-size:cover;
-    background-position:center;
-
-    padding:90px 20px;
-    text-align:center;
-    color:#fff;
-}
-
-.header h1{
-    font-size:52px;
-    margin-bottom:15px;
-}
-
-.header p{
-    max-width:800px;
-    margin:auto;
-    line-height:1.8;
-    font-size:17px;
-}
-
-/* CONTAINER */
-
-.container{
-    width:92%;
-    max-width:1400px;
-    margin:60px auto;
-}
-
-/* SEARCH AREA */
-
-.search-area{
-    background:#fff;
-    padding:30px;
-    border-radius:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    margin-bottom:50px;
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-/* INPUT */
-
-.search-box{
-    position:relative;
-}
-
-.search-box input,
-.search-box select{
-    width:100%;
-    padding:15px 18px;
-    border:none;
-    border-radius:14px;
-    background:#f5f7fb;
-    outline:none;
-    font-size:15px;
-    transition:0.3s;
-}
-
-.search-box input:focus,
-.search-box select:focus{
-    background:#fff;
-    box-shadow:0 0 0 3px rgba(0,150,136,0.15);
-}
-
-/* GRID */
-
-.exam-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-}
-
-/* CARD */
-
-.exam-card{
-    background:#fff;
-    border-radius:24px;
-    overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    transition:0.4s;
-}
-
-.exam-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 18px 40px rgba(0,0,0,0.15);
-}
-
-/* TOP */
-
-.card-top{
-    background:linear-gradient(135deg,#00695c,#009688);
-    padding:25px;
-    color:#fff;
-    position:relative;
-}
-
-.card-top i{
-    font-size:40px;
-    margin-bottom:15px;
-}
-
-.card-top h2{
-    font-size:24px;
-}
-
-.exam-type{
-    position:absolute;
-    right:20px;
-    top:20px;
-    background:rgba(255,255,255,0.2);
-    padding:7px 15px;
-    border-radius:30px;
-    font-size:12px;
-}
-
-/* CONTENT */
-
-.card-content{
-    padding:28px;
-}
-
-.card-content p{
-    margin-bottom:12px;
-    color:#555;
-    font-size:14px;
-    line-height:1.7;
-}
-
-.card-content strong{
-    color:#004d40;
-}
-
-/* BUTTON */
-
-.download-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    margin-top:15px;
-    padding:12px 22px;
-    border-radius:40px;
-    background:linear-gradient(135deg,#00695c,#009688);
-    color:#fff;
-    text-decoration:none;
-    font-size:14px;
-    transition:0.4s;
-}
-
-.download-btn:hover{
-    background:linear-gradient(135deg,#004d40,#00796b);
-    transform:scale(1.05);
-}
-
-/* SECTION TITLE */
-
-.section-title{
-    margin-bottom:30px;
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.section-title i{
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#00695c,#009688);
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:26px;
-}
-
-.section-title h1{
-    color:#004d40;
-    font-size:38px;
-}
-
-/* FOOTER */
-
-.footer{
-    margin-top:70px;
-    background:#002b24;
-    color:#fff;
-    text-align:center;
-    padding:25px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    .header h1{
-        font-size:36px;
-    }
-
-    .section-title h1{
-        font-size:28px;
-    }
-
-}
-
-</style>
 </head>
 <body>
+<!-- TOP NAVBAR -->
+<header id="navbar">
+    <nav class="top-nav">
+
+        <a href="index.html">Home</a>
+
+        <!-- ABOUT DROPDOWN -->
+        <div class="dropdown">
+            <a>About▾</a>
+            <div class="dropdown-menu">
+                <a href="chairperson.html">Chairperson Message</a>
+                <a href="Principal.html">Principal Message</a>
+                <a href="mission and vision.html">Vision & Mission</a>
+                <a href="member committee.html">Management Committee</a>
+            </div>
+            </div>
+
+	<!-- Information cell -->
+        <div class="dropdown">
+            <a href="#">Information cell▾</a>
+                <div class="dropdown-menu">
+                <a href="rules.html">Rules & Regulation</a>
+                <a href="fees.html">Fee Structure</a>
+                <a href="admission.html">Admission Procedure</a>
+		<a href="images\book-letter.pdf">Book Letter</a>
+                <a href="booklist1.html">Book List</a>
+                <a href="images\Shop List book and dress.pdf">Shop List book and dress</a>
+                <a href="cbsenorms.html">CBSE Norms of Education</a>
+                <a href="images\Schooldress.pdf">School Dress</a>
+             </div> 
+	     </div>
+
+       <!-- Academics DROPDOWN -->
+        <div class="dropdown">
+            <a href="#">Academics▾</a>
+            <div class="dropdown-menu">
+                 <a href="examination.html">Examination</a>
+                <a href="circulars.html">Circulars</a>
+             </div> 
+	     </div>
+
+	<a href="faculty.html"> Faculty </a>
+	<a href="campus.html"> Campus & Facilities </a>
+        <a href="admission.html"> Admissions </a>
+        <a href="contact.html"> Contact </a>
+    </nav>
+</header>
 
 <!-- HEADER -->
 
-<div class="header">
+<div class="headerexam">
 
     <h1>Examination Portal</h1>
 
@@ -259,11 +79,11 @@ body{
 
 <!-- CONTAINER -->
 
-<div class="container">
+<div class="containerexam">
 
     <!-- TITLE -->
 
-    <div class="section-title">
+    <div class="section-titleexam">
 
         <i class="fa-solid fa-graduation-cap"></i>
 
@@ -277,10 +97,35 @@ body{
 
         <!-- CLASS SEARCH -->
 
-        <div class="search-box">
-            <input type="text" id="classSearch"
-            placeholder="Search Class Name...">
-        </div>
+       <div class="search-box">
+
+    <select id="classSearch">
+
+        <option value="">All Class Groups</option>
+
+        <option value="Nursery - II">
+            📚 Nursery - II
+        </option>
+
+        <option value="III - V">
+            ✏️ III - V
+        </option>
+
+        <option value="VI - VIII">
+            📝 VI - VIII
+        </option>
+
+        <option value="IX - X">
+            🏆 IX - X
+        </option>
+
+        <option value="XI - XII">
+            🎓 XI - XII
+        </option>
+
+    </select>
+
+</div>
 
         <!-- EXAM TYPE -->
 
@@ -310,230 +155,150 @@ body{
 
     <div class="exam-grid" id="examGrid">
 
-        <!-- CARD 1 -->
+    <!-- Nursery - II -->
 
-        <div class="exam-card"
-        data-class="Class I - V"
-        data-exam="PT1">
+    <div class="exam-card"
+    data-class="Nursery - II"
+    data-exam="PT1">
 
-            <div class="card-top">
+        <div class="card-top">
+            <span class="exam-type">PT1</span>
+            <i class="fa-solid fa-school"></i>
+            <h2>📚 Nursery - II</h2>
+        </div>
 
-                <span class="exam-type">PT1</span>
+        <div class="card-content">
 
-                <i class="fa-solid fa-calendar-days"></i>
+            <p><strong>Classes:</strong> Nursery to II</p>
+            <p><strong>Exam:</strong> PT1 Examination</p>
+            <p>Download date sheet and exam guidelines.</p>
 
-                <h2>Class I - V Date Sheet</h2>
-
-            </div>
-
-            <div class="card-content">
-
-                <p>
-                    <strong>Exam:</strong> PT1 Examination
-                </p>
-
-                <p>
-                    <strong>Session:</strong> 2026-27
-                </p>
-
-                <p>
-                    Download class-wise PT1 examination schedule.
-                </p>
-
-                <a href="#" class="download-btn">
-
-                    <i class="fa-solid fa-download"></i>
-
-                    Download PDF
-
-                </a>
-
-            </div>
+            <a href="#" class="download-btn">
+                <i class="fa-solid fa-download"></i>
+                Download PDF
+            </a>
 
         </div>
 
-        <!-- CARD 2 -->
+    </div>
 
-        <div class="exam-card"
-        data-class="Class VI - VIII"
-        data-exam="Half Yearly">
+    <!-- III - V -->
 
-            <div class="card-top">
+    <div class="exam-card"
+    data-class="III - V"
+    data-exam="Half Yearly">
 
-                <span class="exam-type">Half Yearly</span>
+        <div class="card-top">
+            <span class="exam-type">Half Yearly</span>
+            <i class="fa-solid fa-pencil"></i>
+            <h2>✏️ III - V</h2>
+        </div>
 
-                <i class="fa-solid fa-book-open"></i>
+        <div class="card-content">
 
-                <h2>Class VI - VIII Syllabus</h2>
+            <p><strong>Classes:</strong> III to V</p>
+            <p><strong>Exam:</strong> Half Yearly</p>
+            <p>Download syllabus and date sheet.</p>
 
-            </div>
-
-            <div class="card-content">
-
-                <p>
-                    <strong>Exam:</strong> Half Yearly
-                </p>
-
-                <p>
-                    <strong>Subjects:</strong> All Subjects
-                </p>
-
-                <p>
-                    Download half yearly syllabus PDF.
-                </p>
-
-                <a href="#" class="download-btn">
-
-                    <i class="fa-solid fa-download"></i>
-
-                    Download PDF
-
-                </a>
-
-            </div>
+            <a href="#" class="download-btn">
+                <i class="fa-solid fa-download"></i>
+                Download PDF
+            </a>
 
         </div>
 
-        <!-- CARD 3 -->
+    </div>
 
-        <div class="exam-card"
-        data-class="Class IX - X"
-        data-exam="Pre Board">
+    <!-- VI - VIII -->
 
-            <div class="card-top">
+    <div class="exam-card"
+    data-class="VI - VIII"
+    data-exam="PT2">
 
-                <span class="exam-type">Pre Board</span>
+        <div class="card-top">
+            <span class="exam-type">PT2</span>
+            <i class="fa-solid fa-book-open"></i>
+            <h2>📝 VI - VIII</h2>
+        </div>
 
-                <i class="fa-solid fa-file-lines"></i>
+        <div class="card-content">
 
-                <h2>Class IX - X Pre Board</h2>
+            <p><strong>Classes:</strong> VI to VIII</p>
+            <p><strong>Exam:</strong> PT2 Examination</p>
+            <p>Download PT2 syllabus and schedule.</p>
 
-            </div>
-
-            <div class="card-content">
-
-                <p>
-                    <strong>Exam:</strong> Pre Board
-                </p>
-
-                <p>
-                    <strong>Applicable:</strong> Class IX & X
-                </p>
-
-                <p>
-                    Download pre board date sheet and instructions.
-                </p>
-
-                <a href="#" class="download-btn">
-
-                    <i class="fa-solid fa-download"></i>
-
-                    Download PDF
-
-                </a>
-
-            </div>
+            <a href="#" class="download-btn">
+                <i class="fa-solid fa-download"></i>
+                Download PDF
+            </a>
 
         </div>
 
-        <!-- CARD 4 -->
+    </div>
 
-        <div class="exam-card"
-        data-class="Class XI - XII"
-        data-exam="Annual">
+    <!-- IX - X -->
 
-            <div class="card-top">
+    <div class="exam-card"
+    data-class="IX - X"
+    data-exam="Pre Board">
 
-                <span class="exam-type">Annual</span>
+        <div class="card-top">
+            <span class="exam-type">Pre Board</span>
+            <i class="fa-solid fa-trophy"></i>
+            <h2>🏆 IX - X</h2>
+        </div>
 
-                <i class="fa-solid fa-book"></i>
+        <div class="card-content">
 
-                <h2>Class XI - XII Annual Syllabus</h2>
+            <p><strong>Classes:</strong> IX & X</p>
+            <p><strong>Exam:</strong> Pre Board</p>
+            <p>Download pre-board schedule and instructions.</p>
 
-            </div>
-
-            <div class="card-content">
-
-                <p>
-                    <strong>Exam:</strong> Annual Examination
-                </p>
-
-                <p>
-                    <strong>Streams:</strong> Science / Commerce
-                </p>
-
-                <p>
-                    Download annual syllabus and exam pattern.
-                </p>
-
-                <a href="#" class="download-btn">
-
-                    <i class="fa-solid fa-download"></i>
-
-                    Download PDF
-
-                </a>
-
-            </div>
+            <a href="#" class="download-btn">
+                <i class="fa-solid fa-download"></i>
+                Download PDF
+            </a>
 
         </div>
 
-        <!-- CARD 5 -->
+    </div>
 
-        <div class="exam-card"
-        data-class="Nursery - UKG"
-        data-exam="PT2">
+    <!-- XI - XII -->
 
-            <div class="card-top">
+    <div class="exam-card"
+    data-class="XI - XII"
+    data-exam="Annual">
 
-                <span class="exam-type">PT2</span>
+        <div class="card-top">
+            <span class="exam-type">Annual</span>
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h2>🎓 XI - XII</h2>
+        </div>
 
-                <i class="fa-solid fa-school"></i>
+        <div class="card-content">
 
-                <h2>Nursery - UKG Date Sheet</h2>
+            <p><strong>Classes:</strong> XI & XII</p>
+            <p><strong>Exam:</strong> Annual Examination</p>
+            <p>Download annual syllabus and exam pattern.</p>
 
-            </div>
-
-            <div class="card-content">
-
-                <p>
-                    <strong>Exam:</strong> PT2
-                </p>
-
-                <p>
-                    <strong>Classes:</strong> Nursery to UKG
-                </p>
-
-                <p>
-                    Download PT2 exam schedule for junior classes.
-                </p>
-
-                <a href="#" class="download-btn">
-
-                    <i class="fa-solid fa-download"></i>
-
-                    Download PDF
-
-                </a>
-
-            </div>
+            <a href="#" class="download-btn">
+                <i class="fa-solid fa-download"></i>
+                Download PDF
+            </a>
 
         </div>
 
     </div>
 
 </div>
+</div>
 
 <!-- FOOTER -->
 
-<div class="footer">
-
-    © 2026 Cambridge School | Examination Portal
-
-</div>
-
-<!-- SEARCH SCRIPT -->
-
+<footer class="footer">
+<h5>© 2026 Cambridge School | Inspiring Excellence Every Day</h5>
+</footer>
+<script src="disablerightclick.js"></script>
 <script>
 
 const classSearch = document.getElementById("classSearch");
@@ -542,16 +307,27 @@ const cards = document.querySelectorAll(".exam-card");
 
 function filterCards(){
 
-    let searchValue = classSearch.value.toLowerCase();
-    let examValue = examFilter.value.toLowerCase();
+    let searchValue =
+        classSearch.value.toLowerCase();
+
+    let examValue =
+        examFilter.value.toLowerCase();
 
     cards.forEach(card => {
 
-        let className = card.dataset.class.toLowerCase();
-        let examType = card.dataset.exam.toLowerCase();
+        let className =
+            card.dataset.class.toLowerCase();
 
-        let matchClass = className.includes(searchValue);
-        let matchExam = examValue === "" || examType.includes(examValue);
+        let examType =
+            card.dataset.exam.toLowerCase();
+
+        let matchClass =
+            searchValue === "" ||
+            className === searchValue;
+
+        let matchExam =
+            examValue === "" ||
+            examType.includes(examValue);
 
         if(matchClass && matchExam){
             card.style.display = "block";
@@ -563,8 +339,7 @@ function filterCards(){
     });
 
 }
-
-classSearch.addEventListener("keyup", filterCards);
+classSearch.addEventListener("change", filterCards);
 examFilter.addEventListener("change", filterCards);
 
 </script>

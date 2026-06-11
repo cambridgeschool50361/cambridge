@@ -16,208 +16,63 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background:#f4f7fb;
-    overflow-x:hidden;
-}
-
-/* HERO SECTION */
-
-.hero{
-    position:relative;
-    height:45vh;
-    background:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1920') center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
-
-.hero::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.65);
-}
-
-.hero-content{
-    position:relative;
-    color:white;
-    z-index:2;
-}
-
-.hero-content h1{
-    font-size:3rem;
-    font-weight:700;
-    letter-spacing:1px;
-}
-
-.hero-content p{
-    font-size:1.1rem;
-    margin-top:10px;
-    opacity:0.9;
-}
-
-/* MAIN SECTION */
-
-.rules-section{
-    padding:70px 20px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-size:2.5rem;
-    font-weight:700;
-    color:#0d2c54;
-}
-
-.section-title p{
-    color:#666;
-    margin-top:10px;
-}
-
-/* RULE CARD */
-
-.rule-card{
-    background:white;
-    border-radius:20px;
-    padding:25px;
-    height:100%;
-    transition:0.4s ease;
-    position:relative;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.rule-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 12px 30px rgba(0,0,0,0.15);
-}
-
-.rule-card::before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    width:6px;
-    height:100%;
-    background:linear-gradient(to bottom,#0d6efd,#00c6ff);
-}
-
-.rule-icon{
-    width:65px;
-    height:65px;
-    background:linear-gradient(135deg,#0f5132,#198754);
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:28px;
-    margin-bottom:20px;
-}
-
-.rule-card p{
-    color:#333;
-    font-size:15px;
-    line-height:1.8;
-    margin:0;
-}
-
-/* NOTICE BOX */
-
-.notice-box{
-    margin-top:60px;
-    background:linear-gradient(135deg,#0d2c54,#124c91);
-    color:white;
-    padding:40px;
-    border-radius:25px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
-
-.notice-box h3{
-    font-weight:700;
-    margin-bottom:15px;
-}
-
-.notice-box p{
-    font-size:1.1rem;
-    margin:0;
-}
-
-/* FOOTER */
-
-.footer{
-    background:#071c36;
-    color:white;
-    text-align:center;
-    padding:18px;
-    margin-top:50px;
-}
-
-.footer p{
-    margin:0;
-    font-size:14px;
-}
-
-/* ANIMATION */
-
-.rule-card{
-    animation:fadeUp 0.8s ease;
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-.hero-content h1{
-    font-size:2.2rem;
-}
-
-.section-title h2{
-    font-size:2rem;
-}
-
-.notice-box{
-    padding:25px;
-}
-
-}
-
-</style>
 </head>
+<link rel="stylesheet" href="style.css">
 
 <body>
+<!-- TOP NAVBAR -->
+<header id="navbar">
+    <nav class="top-nav">
+
+        <a href="index.html">Home</a>
+
+        <!-- ABOUT DROPDOWN -->
+        <div class="dropdown">
+            <a>About▾</a>
+            <div class="dropdown-menu">
+                <a href="chairperson.html">Chairperson Message</a>
+                <a href="Principal.html">Principal Message</a>
+                <a href="mission and vision.html">Vision & Mission</a>
+                <a href="member committee.html">Management Committee</a>
+            </div>
+            </div>
+
+	<!-- Information cell -->
+        <div class="dropdown">
+            <a href="#">Information cell▾</a>
+                <div class="dropdown-menu">
+                <a href="rules.html">Rules & Regulation</a>
+                <a href="fees.html">Fee Structure</a>
+                <a href="admission.html">Admission Procedure</a>
+		<a href="images\book-letter.pdf">Book Letter</a>
+                <a href="booklist1.html">Book List</a>
+                <a href="images\Shop List book and dress.pdf">Shop List book and dress</a>
+                <a href="cbsenorms.html">CBSE Norms of Education</a>
+                <a href="images\Schooldress.pdf">School Dress</a>
+             </div> 
+	     </div>
+
+        <!-- Academics DROPDOWN -->
+        <div class="dropdown">
+            <a href="#">Academics▾</a>
+            <div class="dropdown-menu">
+                 <a href="examination.html">Examination</a>
+                <a href="circulars.html">Circulars</a>
+             </div> 
+	     </div>
+
+
+	<a href="faculty.html"> Faculty </a>
+	<a href="campus.html"> Campus & Facilities </a>
+        <a href="#"> Admissions </a>
+        <a href="contact.html"> Contact </a>
+    </nav>
+</header>
 
 <!-- HERO -->
 
-<section class="hero">
-    <div class="hero-content">
+<section class="herorule">
+    <div class="hero-contentrule">
         <h1>Rules & Regulations</h1>
         <p>Discipline, Respect & Responsibility Build Character</p>
     </div>
@@ -444,13 +299,14 @@ body{
 
 <!-- FOOTER -->
 
-<div class="footer">
-    <p>© 2026 Cambridge School. All Rights Reserved.</p>
-</div>
+<footer class="footer">
+<h5>© 2026 Cambridge School | Inspiring Excellence Every Day</h5>
+</footer>
 
 <!-- Bootstrap JS -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="disablerightclick.js"></script>
 
 </body>
 </html>

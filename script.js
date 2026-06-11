@@ -19,39 +19,46 @@ window.addEventListener("scroll", () => {
    SIMPLE VISITOR COUNTER
 ========================= */
 
-// TOTAL VISITORS
-let totalVisitors = localStorage.getItem("totalVisitors");
+// 5 Minute Visit Gap
+const VISIT_INTERVAL = 5 * 60 * 1000; // 5 minutes
 
-if(totalVisitors === null){
-    totalVisitors = 1;
-} else {
-    totalVisitors = parseInt(totalVisitors) + 1;
+const now = Date.now();
+const lastVisit = localStorage.getItem("lastVisitTime");
+
+// Only count a new visit if 5 minutes have passed
+if (!lastVisit || (now - parseInt(lastVisit)) > VISIT_INTERVAL) {
+
+    // TOTAL VISITORS
+    let totalVisitors = parseInt(localStorage.getItem("totalVisitors")) || 0;
+    totalVisitors++;
+
+    localStorage.setItem("totalVisitors", totalVisitors);
+
+    // TODAY VISITORS
+    const today = new Date().toLocaleDateString();
+
+    let savedDate = localStorage.getItem("visitDate");
+    let todayVisitors = parseInt(localStorage.getItem("todayVisitors")) || 0;
+
+    if (savedDate === today) {
+        todayVisitors++;
+    } else {
+        todayVisitors = 1;
+        localStorage.setItem("visitDate", today);
+    }
+
+    localStorage.setItem("todayVisitors", todayVisitors);
+
+    // Save visit time
+    localStorage.setItem("lastVisitTime", now);
 }
 
-localStorage.setItem("totalVisitors", totalVisitors);
+// Display Counts
+document.getElementById("totalVisitors").innerText =
+    localStorage.getItem("totalVisitors") || 0;
 
-document.getElementById("totalVisitors").innerText = totalVisitors;
-
-
-// TODAY VISITORS
-let today = new Date().toLocaleDateString();
-
-let savedDate = localStorage.getItem("visitDate");
-
-let todayVisitors = localStorage.getItem("todayVisitors");
-
-if(savedDate === today){
-    todayVisitors = parseInt(todayVisitors) + 1;
-} else {
-    todayVisitors = 1;
-    localStorage.setItem("visitDate", today);
-}
-
-localStorage.setItem("todayVisitors", todayVisitors);
-
-document.getElementById("todayVisitors").innerText = todayVisitors;
-
-
+document.getElementById("todayVisitors").innerText =
+    localStorage.getItem("todayVisitors") || 0;
 
 
 
@@ -94,4 +101,4 @@ function showHighlightSlide() {
 setInterval(showHighlightSlide, 3000);
 
 // INDEX END-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// INDEX-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
