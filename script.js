@@ -28,7 +28,7 @@ const lastVisit = localStorage.getItem("lastVisitTime");
 // Only count a new visit if 5 minutes have passed
 if (!lastVisit || (now - parseInt(lastVisit)) > VISIT_INTERVAL) {
 
-   fetch("YOUR_GOOGLE_SCRIPT_URL")
+   fetch(https://script.google.com/macros/s/AKfycbywOjIFIAANKwPYCdgTFzebSBdc4RA0hyUcX4rxpCdFIMu4ocIgcmZkb6OnerY_-MQX2Q/exec)
   .then(response => response.text())
   .then(data => {
 
