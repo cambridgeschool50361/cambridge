@@ -28,38 +28,18 @@ const lastVisit = localStorage.getItem("lastVisitTime");
 // Only count a new visit if 5 minutes have passed
 if (!lastVisit || (now - parseInt(lastVisit)) > VISIT_INTERVAL) {
 
-    // TOTAL VISITORS
-    let totalVisitors = parseInt(localStorage.getItem("totalVisitors")) || 0;
-    totalVisitors++;
+   fetch("YOUR_GOOGLE_SCRIPT_URL")
+  .then(response => response.text())
+  .then(data => {
 
-    localStorage.setItem("totalVisitors", totalVisitors);
+      document.getElementById("totalVisitors").innerText = data;
 
-    // TODAY VISITORS
-    const today = new Date().toLocaleDateString();
+      document.getElementById("todayVisitors").innerText = "-";
 
-    let savedDate = localStorage.getItem("visitDate");
-    let todayVisitors = parseInt(localStorage.getItem("todayVisitors")) || 0;
-
-    if (savedDate === today) {
-        todayVisitors++;
-    } else {
-        todayVisitors = 1;
-        localStorage.setItem("visitDate", today);
-    }
-
-    localStorage.setItem("todayVisitors", todayVisitors);
-
-    // Save visit time
-    localStorage.setItem("lastVisitTime", now);
-}
-
-// Display Counts
-document.getElementById("totalVisitors").innerText =
-    localStorage.getItem("totalVisitors") || 0;
-
-document.getElementById("todayVisitors").innerText =
-    localStorage.getItem("todayVisitors") || 0;
-
+  })
+  .catch(error => {
+      console.error(error);
+  });
 
 
 <!-- Video sound -->
